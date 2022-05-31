@@ -1,3 +1,6 @@
+if getgenv().SafeOutputV2 then return end
+getgenv().SafeOutputV2 = true
+
 if not syn then
 	if not string.match(identifyexecutor(), 'ScriptWare') then 
 		return 
