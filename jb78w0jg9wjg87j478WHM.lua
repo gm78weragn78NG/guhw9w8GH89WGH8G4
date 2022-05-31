@@ -1,6 +1,10 @@
 if getgenv().SafeOutputV2 then return end
 getgenv().SafeOutputV2 = true
 
+hookfunction((gcinfo or collectgarbage), function(...)
+	return math.random(200,350) -- memory check
+end)
+
 if not syn then
 	if not string.match(identifyexecutor(), 'ScriptWare') then 
 		return 
